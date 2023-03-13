@@ -25,6 +25,9 @@ public class Main {
         for(Seller obj : list){
             System.out.println(obj);
         }
-
+        System.out.println("\n===== Test 04: Seller INSERT ======");
+        Seller newSeller = new Seller(null, "Yan", "Yan@gmail.com", new Date(), 4000d, department);
+        sellerDao.insert(newSeller);
+        System.out.println("Inserted! New id = " + newSeller.getId());
     }
 }
